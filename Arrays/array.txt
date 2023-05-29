@@ -1,0 +1,14 @@
+Array is a linear data structure. linear means datas are stored in continueous manners.
+Array has fixed size. 
+Array is a type of linear data structure that is defined as a collection of 
+elements with same or different data types.
+They exist in both single dimension and multiple dimensions. 
+
+
+
+Python has dynamic array like list.
+c++ and java has static as well as dynamic arrays.
+static means we can not use more than one data types of values and we cant changing our 
+array after we create in other hand dynamic means array have more than one data types of values
+and can modified.
+

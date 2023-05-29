@@ -1,0 +1,91 @@
+Big O notation Describes the Time Complexity of algorithms.
+In palin words, Big O notation describes the complexity of your code using algebric terms.
+
+Big O notation is used to measure how running time or space requirements for yoyr program grow as input size grows.
+
+lets assume a python code we have size(arr) -> 100 -> time takes 0.22 miliseconds
+                                  size(arr) -> 1000 -> time takes 2.30 miliseconds
+we see the above example the size of array when it is 100 the time takes to execute our code is 0.22 miliseconds
+and other hands when the size of array is 1000 the time takes to execute our code is 2.30 miliseconds
+
+                ^
+                |
+                |    /
+                |   / <-arr(1000)
+           time |  /
+                | / <-arr(100)
+                |/___________________
+                    size(arr) or n
+
+as we see  in graph the size of is increase then time is also increase.
+
+
+lets see a mathematical expression for time:
+            Time = a*n + b
+            we not use every time to find the time of a code using mathematical expression so we create Big O notation for measuring a time coplexity.
+
+            lets see a simplified version of rules in Big O notation:
+                1. Fastest growing term
+
+                    time = a*n +b
+                         |   
+                        time = a*n  (b is constant so ignore b)
+                2. Drop constant
+                    time = a*n
+                        |
+                        time = O(n)   (a is constant)
+
+
+
+lets see a code:
+
+def square(n):
+    sqr = []
+    for i in n:                 <--- time complexity is O(n)---cause whenever the number are increased 
+                                     the time is linearly increased.
+        sqr.append(i*i)
+    return sqr
+
+
+lets see another code:
+finding first duplicate no. from list
+n = [3,4,3,5,6,4,7]
+                                   # time complexity of the code is O(n^2) 
+for i in range(len(n)): <---- O(n)
+    for j in range(i+1,len(n)): <---- O(n)      #we remove all canstant then O(n^2) is time complexityfor this code
+                                                   nested loop nxn=n^2         
+        if n[i] == n[j]: <----O(1)
+        print(n[i]) <---O(1)
+        break <----O(1)
+
+
+
+
+lets see another code:
+n = [3,4,3,5,6,4,7]
+dup = None                                 
+for i in range(len(n)): <---- O(n)
+    for j in range(i+1,len(n)): <---- O(n)   <----- a*n^2       
+        if n[i] == n[j]: <----O(1)
+        print(n[i]) <---O(1)
+        break <----O(1)
+
+for i in range(len(n)):   <-----       b*n
+    if n[i] == dup:
+        print(i)
+
+here is mathematical exp is -------->  a*n^2 + b*n + c (remove canstants)
+                                        a*n^2
+                                        O(n^2)
+
+
+
+lets see for constant time complexity code:
+
+deff find_first_rate(pr,eps,index):
+    pe = pr[index] / eps[index]  <----------O(1)
+    return pe <---------------O(1)
+
+here is the code is execute at a constant time it is not itrating all the values its executes only one condition and return it
+
+

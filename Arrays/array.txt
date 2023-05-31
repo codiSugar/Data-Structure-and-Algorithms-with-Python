@@ -1,3 +1,8 @@
+Array is collection of items that stores consecutively in the memory.
+Two things you always keepn in your mind abot arrays Items have same data types.
+and second is Arrays have fixed size.
+
+
 Array is a linear data structure. linear means datas are stored in continueous manners.
 Array has fixed size. 
 Array is a type of linear data structure that is defined as a collection of 

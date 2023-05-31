@@ -1,0 +1,21 @@
+Linked List is linear data structure where we can store our large amount of data in single variable.
+linked list does not required size allocation 
+
+easy to insertion.
+
+
+
+
+
+
+
+
+
+    ________________        _____________       ______________        ______________      
+   |  5   | 1XB     | ---->|      |      |---->|      |       |----->|      |       |   
+   |______|_________|   ^  |______|______|  ^  |______|_______|   ^  |______|_______| <---- T A I L  
+        ^               |        ^          |        ^            |        ^               
+        |               |        |          |        |            |        |
+        |             LINKS      |        LINKS      |          LINKS      | 
+        |                        |                   |                     |  
+     H E A D                 N O D E S           N O D E S             N O D E S
